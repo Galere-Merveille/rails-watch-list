@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h1>Welcome to your Watch List</h1>
+  <div class="container text-center">
+    <div class="row gx-3 gy-3">
+    <% @lists.each do |list| %>
+      <div class="card col-6">
+        <div class="card-body p-3">
+          <i class="fa-solid fa-film"></i> <%= link_to list.name, list_path(list.id), class:"text-decoration-none text-reset" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <%= link_to "Create a movie list", new_list_path, class:"btn btn-primary mt-2" %>
+</div>
